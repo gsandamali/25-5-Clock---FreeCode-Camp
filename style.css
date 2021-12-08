@@ -22,3 +22,28 @@ button {
 .length-control {
     display: inline-block;
  }
+.timer {
+    border: 7px solid #13353a;
+    margin: 20px auto 10px auto;
+    width: 270px;
+    height: 160px;
+    border-radius: 50px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    #container {
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+    }
+  }
+  
+  .author {
+    text-align: center;
+    font-family: Share Tech Mono, sans;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #a50d0d;
+  }
