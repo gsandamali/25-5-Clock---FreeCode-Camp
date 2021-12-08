@@ -4,3 +4,21 @@ body {
     font-size: 30px;
     text-align: center;
 }
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    color: rgb(44, 126, 158);
+    cursor: pointer;
+    }
+.btn-level,
+.length-control {
+    display: inline-block;
+ }
