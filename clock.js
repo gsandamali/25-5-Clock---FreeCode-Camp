@@ -50,9 +50,14 @@ function decrementTime(timeString) {
         
         if (minuteDisplay <= -1) {
             console.log(minuteDisplay)
-            minuteDisplay = breakLength.innerHTML-1;
-        }
-
+            if (document.getElementById('timer-label').innerText === "Session"){
+                document.getElementById('timer-label').innerText = "Break";
+                minuteDisplay = breakLength.innerHTML-1;
+            }else{
+                document.getElementById('timer-label').innerText = "Session";
+                minuteDisplay = sessionLength.innerHTML-1;
+            }
+        };
 
         if (minuteDisplay === 0) {
             timeLeft.style.color = "#FF0000";
@@ -83,7 +88,6 @@ sessionIncrement.onclick = function() {
   sessionLength.innerHTML = count;
   let minuteDisplay = parseInt(timeDisplay[0]);
   minuteDisplay =count;
-  minuteDisplay = count
 
   let IntMin = minuteDisplay.toString();
   
