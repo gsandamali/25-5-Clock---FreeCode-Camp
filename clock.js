@@ -35,18 +35,20 @@ reset.addEventListener("click", () => {
     breakLength.innerHTML=5;
     sessionLength.innerHTML=25;
     timeLeft.innerHTML=25+":"+"00";
+
 });
 
 function decrementTime(timeString) {
     let timeDisplay = timeString.split(":");
-    let secondDisplay = parseTnt(timeDisplay[1]);
-    let minuteDisplay = parseTnt(timeDisplay[0]);
+    let secondDisplay = parseInt(timeDisplay[1]);
+    let minuteDisplay = parseInt(timeDisplay[0]);
 
     secondDisplay -= 1;
 
     if (secondDisplay === -1) {
         secondDisplay = 59;
         minuteDisplay -= 1;
+
         
         if (minuteDisplay <= -1) {
             console.log(minuteDisplay)
@@ -57,7 +59,7 @@ function decrementTime(timeString) {
                 document.getElementById('timer-label').innerText = "Session";
                 minuteDisplay = sessionLength.innerHTML-1;
             }
-        };
+        }
 
         if (minuteDisplay === 0) {
             timeLeft.style.color = "#FF0000";
@@ -66,7 +68,7 @@ function decrementTime(timeString) {
         } else {
             timeLeft.style.color = "#000000";
             document.getElementById('timer-label').style.color = "#000000";
-        }
+        }      
     }
 
     if (secondDisplay <= 9) {
@@ -75,7 +77,9 @@ function decrementTime(timeString) {
 
     return minuteDisplay + ":" + secondDisplay;
     
-}
+};
+
+
 
 let timeDisplay = timeLeft.innerText.split(":");
 var count = parseInt(timeDisplay[0]);
